@@ -1,0 +1,6 @@
+/* ส่วนเสริม UI แยกไฟล์เพื่อให้ดูแลและอัปเดตเว็บแอปง่ายขึ้น */
+.navfiles{display:flex;gap:8px;margin-top:9px}
+.navfiles .btn{flex:1}
+button:disabled{cursor:not-allowed;opacity:.58}
+input:focus-visible,button:focus-visible{outline:3px solid #93b4ff;outline-offset:2px}
+@media(max-width:650px){.navfiles{flex-direction:column}.navfiles .btn{width:100%}}
