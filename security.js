@@ -55,7 +55,7 @@
   securePasswordFields();
 
   const clearAllButton = document.querySelector('.clear-all');
-  clearAllButton?.addEventListener('click', async () => {
+  window.fileLockClearAll = async () => {
     const accepted = window.confirm(
       'ล้างรายการไฟล์ รหัสผ่าน ตัวอย่างสื่อ ไฟล์ชั่วคราว และ cache ของ FileLock Pro ใช่หรือไม่?\n\nไฟล์ต้นฉบับและไฟล์ที่บันทึกไว้จะไม่ถูกลบ'
     );
@@ -85,7 +85,7 @@
 
     window.dispatchEvent(new Event('filelock-clear-all'));
     clearAllButton.disabled = false;
-  });
+  };
 
   // เก็บกวาดไฟล์ preview ที่อาจค้างจากการปิดแท็บหรือ browser crash ครั้งก่อน
   if (navigator.storage?.getDirectory) {
